@@ -1,0 +1,29 @@
+# Vercel Ignore File
+
+# Dependencies (akan di-install oleh Vercel saat build)
+/vendor
+/node_modules
+
+# Environment & Config Lokal (PENTING: Jangan upload .env)
+.env
+.env.example
+.editorconfig
+.gitattributes
+.gitignore
+phpunit.xml
+
+# Testing & Dokumentasi
+/tests
+README.md
+
+# Storage Lokal (Vercel bersifat read-only / ephemeral)
+# Kita ignore isinya agar log/cache lokal tidak ikut ter-upload
+/storage/logs
+/storage/framework/sessions
+/storage/framework/cache
+/storage/framework/views
+/storage/framework/testing
+/storage/debugbar
+
+# Jika Anda build assets secara lokal dan push hasilnya (opsional)
+# /public/build
