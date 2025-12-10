@@ -11,6 +11,7 @@
         }
     ],
     "env": {
+        "APP_KEY": "base64:IjM3hZqWJuPMAGQw5qTaame6JVg2Fs/oWCIWjA1AdhY=",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://${VERCEL_URL}",
@@ -25,4 +26,5 @@
         "SESSION_DRIVER": "cookie"
     }
 }
+
 
