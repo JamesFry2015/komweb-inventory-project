@@ -43,3 +43,13 @@ Route::resource('stock-movements', StockMovementController::class);
 
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/migrate', function () {
+    // Run the migration command
+    Artisan::call('migrate', [
+        '--force' => true // Force is required for production
+    ]);
+    
+    // Return the output so you can see what happened
+    return 'Migrations ran successfully! <br><br>' . nl2br(Artisan::output());
+});
